@@ -13,6 +13,14 @@ export default function Map(props) {
         }
     ];
 
+    function displayMessage() {
+        alert('message displayed')
+    }
+
+    function displayText(e) {
+        alert(e)
+    }
+
     //Map can be used inside JSX expression
     //Key property is mandatory when using Map in React and key should be unique
 
@@ -30,6 +38,13 @@ export default function Map(props) {
                 </ul>
             })
         }
+        <div style={{display: 'flex', gap: 10}}>
+            {/* () => Use callback when you want to pass arguments to the event handler function otherwise
+                it will invoke the function immediately */}
+            <button onClick={() => alert('clicked')}>Click1</button>
+            <button onClick={displayMessage}>Click2</button>
+            <input type='text' onKeyUp={() => displayText('input changed')} />
+        </div>
         </>
     )
 }
