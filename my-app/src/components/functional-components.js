@@ -1,5 +1,8 @@
 import '../index.css';
-export function Header() {
+export function Header(props) {
+    // props contains all properties data from parent where it is being called
+    // props are immutable i.e., we cannot change the value of props
+    console.log(props);
     let menus = ['home', 'About Us', 'Contact US'];
     return (<header>
         {show()}
@@ -9,7 +12,7 @@ export function Header() {
             <li>{menus[2]}</li>
         </ul>
         <input type='checkbox' id='sub' />
-        <label htmlFor='sub'>Subscribe</label>
+        <label htmlFor='sub'>Subscribe {props.name}</label>
     </header>)
 }
 
