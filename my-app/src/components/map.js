@@ -1,4 +1,5 @@
-export default function Map() {
+export default function Map(props) {
+    console.log(props)
     let users = [
         {
             id: 1,
@@ -17,6 +18,10 @@ export default function Map() {
 
     return (
         <>
+        {/* Props Children data is the data between the tags where it is called */}
+        <div style={{display: 'flex', gap: 20, marginTop: 20}}>
+            {props.children}
+        </div>
         {
             users.map(u => {
                 return <ul key={u.id}>
