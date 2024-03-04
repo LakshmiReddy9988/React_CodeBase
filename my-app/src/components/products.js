@@ -6,6 +6,12 @@ function Products() {
 
     const [products, updateProducts] = useState([]);
 
+    /**
+     * useEffect hook will be triggered after component rendered
+     * If dependencies not provided, then it will trigger everytime when the component rerenders
+     * If dependencies are empty array, then it will trigger only when the component renders first time
+     * If we provide dependencies, then it will trigger every time when the dependency variable updates
+     */
     useEffect(() => {
         getProducts();
     }, []);
