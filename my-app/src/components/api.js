@@ -3,6 +3,9 @@ import axios from "axios";
 
 function ApiIntegration() {
 
+    /**
+     * axios.create is used to create when we are using the same url for other api calls like post, put, delete
+     */
     let api = axios.create({
         baseURL: 'https://fakestoreapi.com'
     });
