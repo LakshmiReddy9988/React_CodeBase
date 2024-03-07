@@ -25,7 +25,16 @@ User.propTypes = {
 }
 
 User.defaultProps = {
-    name: 'John'
+    name: 'John' //If name is not sent from parent then this default value should be considered
 }
 
 export default PropTypesInReact
+
+/**
+ * JSX Rules
+ * 1. Functional component name should start with Upper Case
+ * 2. Return only Single element/component, if we want to display multiple elements/components then enclose everything in one tag
+ * 3. Closing tag is must
+ * 4. camelCase for css properties, events & attributes. Eg: className, marginTop, onClick, htmlFor etc.
+ * 5. Do not use JavaScript keywords for attributes. Eg: class, for etc.
+ */
