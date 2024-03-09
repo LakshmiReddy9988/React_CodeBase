@@ -1,3 +1,5 @@
+@import url('bootstrap/dist/css/bootstrap.min.css');;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,36 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 2;
+}
+
+form{
+  background-color: #fff;
+  width: 500px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+form button {
+  margin: 20px 5px;
+  padding: 5px;
+  width: 80px;
 }

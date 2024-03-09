@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "name": "Redmin note 11",
+      "price": "29999",
+      "category": "mobiles",
+      "id": "1"
+    },
+    {
+      "name": "Vivo V20",
+      "price": "20000",
+      "category": "mobiles",
+      "id": "2"
+    },
+    {
+      "name": "Iphone 11",
+      "price": "39000",
+      "category": "mobiles",
+      "id": "3"
+    },
+    {
+      "name": "Realme 10",
+      "price": "10000",
+      "category": "mobiles",
+      "id": "4"
+    }
+  ]
+}
