@@ -7,6 +7,7 @@ function Account() {
             return state
         }
     )
+    console.log(data)
 
     return(
         <>
@@ -22,10 +23,36 @@ function Account() {
                     </thead>
                     <tbody>
                         <tr>
-                            <th>{data.balance}</th>
-                            <th>{data.fullName}</th>
-                            <th>{data.mobile}</th>
+                            <th>{data.account.balance}</th>
+                            <th>{data.account.fullName}</th>
+                            <th>{data.account.mobile}</th>
                         </tr>
+                    </tbody>
+                </table>
+
+                <h2 className="text-primary">Transaction Details</h2>
+                <table className="table table-bordered w-50">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data.transactions.map(
+                                (transaction) =>(
+                                    <tr key={transaction.id}>
+                                        <th>{transaction.id}</th>
+                                        <th>{transaction.amount}</th>
+                                        <th>{transaction.type}</th>
+                                        <th>{transaction.date.toLocaleDateString()}</th>
+                                    </tr>
+                                )
+                            )
+                        }
                     </tbody>
                 </table>
             </div>

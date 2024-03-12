@@ -8,6 +8,7 @@ function Form() {
   const [amount, setAmount] = useState("");
   const [fullNmae, setFullName] = useState("");
   const [mobile, setMobile] = useState("");
+  const [transcId, updateTranscId] = useState(0);
 
   return (
     <>
@@ -28,7 +29,14 @@ function Form() {
           <button
             className="btn btn-primary col-2"
             onClick={() => {
-                dispatch(deposit(amount));
+              dispatch(deposit(amount));
+              updateTranscId((id) => id+1);
+              dispatch({
+                type: 'ADD_TRANSACTION',
+                payload: {
+                  amount: amount, date: new Date(), type: 'Debit', id: transcId
+                }
+              });
             //   dispatch({ type: "deposit", payload: amount });
               setAmount("");
             }}
@@ -39,6 +47,13 @@ function Form() {
             className="btn btn-danger mx-2 col-2"
             onClick={() => {
               dispatch(withdraw(amount));
+              updateTranscId((id) => id+1);
+              dispatch({
+                type: 'ADD_TRANSACTION',
+                payload: {
+                  amount: amount, date: new Date(), type: 'Debit', id: transcId
+                }
+              });
               setAmount("");
             }}
           >
