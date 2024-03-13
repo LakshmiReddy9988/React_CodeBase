@@ -33,7 +33,7 @@ export default function Account(){
                     </tbody>
                 </table>
 
-                <h2 className="text-primary m-3">Transaction Details</h2>
+                <h2 className="text-primary mt-3">Transaction Details</h2>
                 <table className="table table-bordered w-50">
                     <thead>
                         <tr>
